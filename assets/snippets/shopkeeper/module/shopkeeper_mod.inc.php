@@ -357,6 +357,7 @@ default:
     if($total==$conf_perpage) $page = 1;
     
     //верхние кнопки
+    /*
     echo '
       <div style="width:100%; height:30px;">
         <div style="margin-bottom:15px;float:left;">
@@ -378,6 +379,7 @@ default:
         </div>
       </div>
     ';
+    */
 
     if($total>0){
 

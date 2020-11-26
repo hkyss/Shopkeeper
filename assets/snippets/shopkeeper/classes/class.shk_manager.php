@@ -408,7 +408,7 @@ class SHKmanager extends Shopkeeper {
         if(!is_array($fields) || !$template) return $output;
         $output = $template;
         foreach ($fields as $key => $val){
-          $ph_value = $with_fields ? '<input class="editable" type="text" name="shkct_'.$key.'" value="'.$val.'" size="35" />' : $val;
+          $ph_value = $with_fields ? '<input class="editable" type="text" name="shkct_'.$key.'" value="'.$val.'" size="35" readonly disabled />' : $val;
           $output = str_replace('[+'.$key.'+]',$ph_value,$output);
         }
         $output = preg_replace('/(\[\+(.*?)\+\]|\s,)/', "", $output);

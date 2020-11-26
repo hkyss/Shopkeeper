@@ -97,7 +97,8 @@ class Shopkeeper {
     function numberFormat($number){
         $output = $number;
         if($this->config['excepDigitGroup']==true){
-          $output = number_format((double)$number,(floor($number) == $number ? 0 : 2),'.',' ');
+          $output = str_replace(',','.',$output);
+          $output = str_replace(',','.',sprintf("%.2f", $output));
         }
         return $output;
     }
